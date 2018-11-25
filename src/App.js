@@ -2,6 +2,24 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+if (process.env.IS_ELECTRON) {
+  // const serialport = require('serialport');
+  // // will show connected serialport devices if any
+  // serialport.list().then(list => console.log(list));
+  const usbDetect = require("usb-detection");
+  usbDetect
+    .find()
+    .then(function(devices) {
+      console.log(devices);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+  alert("Electron detected");
+} else {
+  alert("Browser detected");
+}
+
 class App extends Component {
   render() {
     return (
