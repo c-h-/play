@@ -1,7 +1,32 @@
 {
-  "name": "play",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/c-h-/play.git",
-  "license": "ISC"
+  "name": "cull",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "postinstall": "electron-rebuild"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-rebuild": "^1.8.2"
+  },
+  "main": "src/electron-starter.js"
 }
